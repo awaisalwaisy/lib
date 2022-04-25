@@ -3,7 +3,7 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable camelcase */
 /* ids of elements needed */
-console.log('hey---)
+
 const div_name = 'continue_div';
 
 const input_textarea_name = 'proxy_list';
@@ -673,6 +673,8 @@ function DownloadFile(filename) {
 }
 
 function StartCheck() {
+  ApiRequest();
+  console.log('bye');
   Lang();
 
   if (LoadList()) {

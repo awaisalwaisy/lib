@@ -361,19 +361,23 @@ function Increment(span_id) {
 function ApiRequest(ip) {
   try {
     const Data = new FormData();
+    console.log(Data, 'Data');
     ip.forEach((i) => {
+      console.log(i, 'i');
       Data.append('ip_addr[]', i);
+      console.log(Data.append('ip_addr[]', i), '|');
     });
 
     // Data.append("port", port.replace(" ", ""));
 
+    console.log(Data, 'now Data');
     fetch(api_url, {
 
       method: 'post',
-
       body: Data,
 
     }).then((response) => {
+      console.log(response, 'in api block -response');
       if (response.status === 200) {
         try {
           response.json().then((data) => {

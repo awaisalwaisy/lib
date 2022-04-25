@@ -367,7 +367,7 @@ function ApiRequest(ip) {
     ip.forEach((i) => {
       console.log(i, 'i');
       Data.append('ip_addr[]', i);
-      console.log(Data.append('ip_addr[]', i), '|');
+      // console.log(Data.append('ip_addr[]', i), '|');
     });
 
     // Data.append("port", port.replace(" ", ""));
@@ -383,6 +383,7 @@ function ApiRequest(ip) {
       if (response.status === 200) {
         try {
           response.json().then((data) => {
+            console.log(data, '***');
             data.forEach((response_json) => {
               setTimeout(() => {
                 // AddProxy(response_json["ip"], response_json["port"], rx);
@@ -675,7 +676,7 @@ function DownloadFile(filename) {
 }
 
 function StartCheck() {
-  ApiRequest();
+  // ApiRequest();
   console.log('bye');
   Lang();
 
